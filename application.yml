@@ -1,11 +1,12 @@
+spring:
+  application:
+    name: Config-Default
+
 eureka:
   instance:
-    prefer-ip-address: true # Ensures the service registers with its IP instead of the hostname
-    hostname: host.docker # Set the hostname explicitly (optional if Docker hostname is used)
+    prefer-ip-address: true
   client:
-    renewalIntervalInSecs: 30
-    evictionIntervalInSecs: 30
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://host.docker:8761/eureka # Update `localhost` if Eureka is running elsewhere
+      defaultZone: http://localhost:8761/eureka
